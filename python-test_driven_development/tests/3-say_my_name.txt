@@ -1,22 +1,53 @@
-say_my_name = __import__('3-say_my_name').say_my_name
+=========================================
+3. Say My Name module
+=========================================
 
-# Test 1: Print name with first name only
-assert say_my_name("John") == "My name is John "
+Import module:
+==============
+    >>> say_my_name = __import__('0-say_my_name').say_my_name
 
-# Test 2: Print name with first name and last name
-assert say_my_name("Jane", "Doe") == "My name is Jane Doe"
+Function:
+=========
+Print a message with the given first name and last name.
 
-# Test 3: Print name with last name as an empty string
-assert say_my_name("Alice") == "My name is Alice "
+Operations:
+===========
+- 'first_name' and 'last_name' must be strings, otherwise raise a TypeError exception.
 
-# Test 4: Handling of non-string input for first name
-try:
-    say_my_name(42, "Smith")
-except TypeError as e:
-    assert str(e) == "first_name must be a string"
+Section // Valid Inputs
+=======================
 
-# Test 5: Handling of non-string input for last name
-try:
-    say_my_name("Bob", 123)
-except TypeError as e:
-    assert str(e) == "last_name must be a string"
+Test case #0: A test case with both first name and last name provided
+
+    >>> say_my_name("John", "Doe")
+    My name is John Doe
+
+Test case #1: A test case with only the first name provided
+
+    >>> say_my_name("Alice")
+    My name is Alice
+
+Test case #2: A test case with an empty first name and last name
+
+    >>> say_my_name("", "")
+    My name is 
+
+Test case #3: A test case with an empty last name
+
+    >>> say_my_name("Bob", "")
+    My name is Bob 
+
+Section // Invalid Inputs
+=========================
+
+Test case #4: A test case with first name as an integer
+
+    >>> say_my_name(123, "Smith")
+    Traceback (most recent call last):
+        TypeError: first_name must be a string
+
+Test case #5: A test case with last name as a float
+
+    >>> say_my_name("David", 3.14)
+    Traceback (most recent call last):
+        TypeError: last_name must be a string

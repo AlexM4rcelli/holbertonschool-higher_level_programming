@@ -14,19 +14,6 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    sentences = []
-    sentence = ""
-
-    for char in text:
-        if char in ['.', '?', ':']:
-            sentences.append(sentence.strip())
-            sentence = ""
-        else:
-            sentence += char
-
-    if sentence:
-        sentences.append(sentence.strip())
-
-    for sentence in sentences:
-        print(sentence)
-        print("\n")
+    for delimeter in "?:.":
+        words = (delimeter + "\n\n").join(
+                [index.strip(" ") for index in words.split(delimeter)])
