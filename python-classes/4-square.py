@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 """Define a class Square."""
+
+
 class Square:
     """Represent a square."""
     def __init__(self, size=0):
@@ -27,7 +29,7 @@ class Square:
     def area(self):
         """Return the current area of the square."""
         return self.__size ** 2
-    
+
     def my_print(self):
         """Print the square with the # character."""
         for i in range(0, self.__size):
