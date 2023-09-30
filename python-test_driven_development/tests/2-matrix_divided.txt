@@ -1,5 +1,5 @@
 ========================================
-2. Matrix division module
+1. Matrix division module
 ========================================
 
 Import module:

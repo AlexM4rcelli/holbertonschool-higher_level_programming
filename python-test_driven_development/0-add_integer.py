@@ -1,23 +1,26 @@
 #!/usr/bin/python3
+"""A module to add two numbers"""
 
-def add_integer(a, b=98):
-    """
-    Add two integers.
 
-    Args:
-        a (int or float): The first number.
-        b (int or float, optional): The second number.
+if __name__ == "__main__":
+    def add_integer(a, b=98):
+        """
+        Add two integers.
 
-    Returns:
-        int: The sum of the args.
+        Args:
+            a (int or float): The first number.
+            b (int or float, optional): The second number.
 
-    Raises:
-        TypeError: If a or b is not an integer or float.
-    """
+        Returns:
+            int: The sum of the args.
 
-    if not isinstance(a, (int, float)):
-        raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
-        raise TypeError("b must be an integer")
+        Raises:
+            TypeError: If a or b is not an integer or float.
+        """
 
-    return (int(a) + int(b))
+        if not isinstance(a, (int, float)):
+            raise TypeError("a must be an integer")
+        if not isinstance(b, (int, float)):
+            raise TypeError("b must be an integer")
+
+        return (int(a) + int(b))
