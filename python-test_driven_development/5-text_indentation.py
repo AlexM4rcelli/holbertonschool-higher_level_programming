@@ -5,27 +5,26 @@ these characters: `.`, `?`, `:`
 """
 
 
-if __name__ == "__main__":
-    def text_indentation(text):
-        """
-        Print a text with 2 new lines after each '.', '?', and ':' character.
+def text_indentation(text):
+    """
+    Print a text with 2 new lines after each '.', '?', and ':' character.
 
-        Args:
-            text (str): The input text.
+    Args:
+        text (str): The input text.
 
-        Raises:
-            TypeError: If text is not a string.
-        """
+    Raises:
+        TypeError: If text is not a string.
+    """
 
-        if not isinstance(text, str):
-            raise TypeError("text must be a string")
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
 
-        result = []
-        for char in text:
-            if char in ".?:":
-                result.append(char + "\n\n")
-            else:
-                result.append(char)
+    result = []
+    for char in text:
+        if char in ".?:":
+            result.append(char + "\n\n")
+        else:
+            result.append(char)
 
-        formatted_text = "".join(result)
-        print(formatted_text)
+    formatted_text = "".join(result)
+    print(formatted_text)
