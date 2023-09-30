@@ -1,0 +1,23 @@
+add_integer = __import__('0-add_integer').add_integer
+
+# Test 1: Sum of two integers
+assert add_integer(5, 3) == 8
+
+# Test 2: Sum of integer and float (with default b value)
+assert add_integer(10.5) == 108
+
+# Test 3: Sum of two negative integers
+assert add_integer(-7, -2) == -9
+
+# Test 4: Sum of two floats
+assert add_integer(3.5, 2.25) == 5
+
+# Test 5: Handling of non-integer/float input
+try:
+    add_integer("5", 3)
+except TypeError as e:
+    assert str(e) == "a must be an integer"
+try:
+    add_integer(5, "3")
+except TypeError as e:
+    assert str(e) == "b must be an integer"

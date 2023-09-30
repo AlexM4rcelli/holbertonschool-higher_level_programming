@@ -1,0 +1,19 @@
+text_indentation = __import__('5-text_indentation').text_indentation
+
+# Test 1: Print text with sentences separated by new lines
+assert text_indentation("This is a test. Another test? Yes: it is.") == "This is a test\n\nAnother test\nYes\nit is\n"
+
+# Test 2: Handling of non-string input for text
+try:
+    text_indentation(42)
+except TypeError as e:
+    assert str(e) == "text must be a string"
+
+# Test 3: Handling of empty input text
+assert text_indentation("") == ""
+
+# Test 4: Print text with sentences separated by new lines (no special characters)
+assert text_indentation("No special characters") == "No special characters\n"
+
+# Test 5: Print text with sentences separated by new lines (with multiple spaces)
+assert text_indentation("  Test with    spaces.   More tests?   ") == "Test with    spaces\nMore tests\n"

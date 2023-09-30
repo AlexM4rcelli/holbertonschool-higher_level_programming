@@ -1,0 +1,25 @@
+print_square = __import__('4-print_square').print_square
+
+# Test 1: Print a square of size 3
+assert print_square(3) == "###\n###\n###"
+
+# Test 2: Print a square of size 5
+assert print_square(5) == "#####\n#####\n#####\n#####\n#####"
+
+# Test 3: Handling of size less than 0
+try:
+    print_square(-2)
+except ValueError as e:
+    assert str(e) == "size must be >= 0"
+
+# Test 4: Handling of size as a float less than 0
+try:
+    print_square(2.5)
+except TypeError as e:
+    assert str(e) == "size must be an integer"
+
+# Test 5: Handling of non-integer input for size
+try:
+    print_square("4")
+except TypeError as e:
+    assert str(e) == "size must be an integer"
