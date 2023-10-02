@@ -10,9 +10,20 @@ class Rectangle:
         Args:
             width (int): The width of the new Rectangle.
         """
-        self.__width = width
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        if height < 0:
+            raise ValueError("height must be >= 0")
+
         self.__height = height
 
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
+
+        self.__width = width
+        
     @property
     def width(self):
         """Get/set the current width of the square."""
