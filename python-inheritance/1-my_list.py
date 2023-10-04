@@ -3,7 +3,9 @@
 
 
 class MyList(list):
+    """List Class"""
+
+
     def print_sorted(self):
         """Prints a sorted list"""
-        if all(isinstance(num, int) for num in self):
-            print(sorted(self))
+        print(sorted(self))
