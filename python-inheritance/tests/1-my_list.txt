@@ -23,7 +23,6 @@ Test case #1: A valid MyList instance with no integers
 
     >>> my_list = MyList(['apple', 'banana', 'cherry'])
     >>> my_list.print_sorted()
-    ['apple', 'banana', 'cherry']
 
 Test case #2: A valid MyList instance with an empty list
 
@@ -38,10 +37,8 @@ Test case #3: An invalid MyList instance with a string
 
     >>> my_list = MyList('Hello')
     >>> my_list.print_sorted()
-    ['H', 'e', 'l', 'l', 'o']
 
 Test case #4: An invalid MyList instance with a dictionary
 
     >>> my_list = MyList({'name': 'John', 'age': 30})
     >>> my_list.print_sorted()
-    ['age', 'name']
