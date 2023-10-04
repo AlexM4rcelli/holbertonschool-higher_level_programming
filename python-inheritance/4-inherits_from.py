@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""Module to a function that compare two objects"""
+"""Check if instance of a class that inherited (directly or indirectly)
+from the specified class"""
 
 
-def is_same_class(obj, a_class):
+def inherits_from(obj, a_class):
     """
         Args:
             @obj: Object to check if is instance of the other one
@@ -11,4 +12,4 @@ def is_same_class(obj, a_class):
             True if the object is exactly an instance of the specified class,
             otherwise False
     """
-    return type(obj) is a_class
+    return isinstance(obj, a_class) and type(obj) is not a_class
