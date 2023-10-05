@@ -26,4 +26,4 @@ class Square(Rectangle):
         Returns:
             str: A string in the format "[Square] size/size".
         """
-        return f"[Square] {self.__size}/{self.__size}"
+        return f"[{type(self).__name__}] {self.__size:d}/{self.__size:d}"

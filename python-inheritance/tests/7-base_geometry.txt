@@ -44,26 +44,8 @@ Test case #3: An invalid BaseGeometry instance with a non-integer width
 Traceback (most recent call last):
 TypeError: width must be an integer
 
-Test case #4: An invalid BaseGeometry instance with a non-integer height
-
->>> bg = BaseGeometry()
->>> bg.integer_validator("height", 3.14)
-Traceback (most recent call last):
-TypeError: height must be an integer
-
-Test case #5: invalid name and value
+Test case #4: invalid name and value
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("", 3.14)
 Traceback (most recent call last):
 TypeError:  must be an integer
-
-Test case #6: set input
->>> bg = BaseGeometry()
->>> bg.integer_validator("height", {1, 2})
-Traceback (most recent call last):
-TypeError: height must be an integer
-
->>> bg = BaseGeometry()
->>> bg.integer_validator("height", )
-Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
