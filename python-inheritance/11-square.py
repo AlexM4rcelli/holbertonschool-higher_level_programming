@@ -19,11 +19,3 @@ class Square(Rectangle):
         """
         super().__init__(size, size)
         self.__size = size
-
-    def __str__(self):
-        """Return a string representation of the Square object.
-
-        Returns:
-            str: A string in the format "[Square] size/size".
-        """
-        return f"[{type(self).__name__}] {self.__size:d}/{self.__size:d}"
