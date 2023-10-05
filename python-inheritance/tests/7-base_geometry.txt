@@ -50,3 +50,20 @@ Test case #4: An invalid BaseGeometry instance with a non-integer height
 >>> bg.integer_validator("height", 3.14)
 Traceback (most recent call last):
 TypeError: height must be an integer
+
+Test case #5: invalid name and value
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("", 3.14)
+Traceback (most recent call last):
+ValueError: name must be not empty
+
+Test case #6: set input
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("height", {1, 2})
+Traceback (most recent call last):
+TypeError: height must be an integer
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("height", )
+Traceback (most recent call last):
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'

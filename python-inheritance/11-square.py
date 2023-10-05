@@ -17,8 +17,8 @@ class Square(Rectangle):
         Attributes:
             __size (int): The size of the square's sides.
         """
+        super().__init__(size, size)
         self.__size = size
-        super().__init__(self.__size, self.__size)
 
     def __str__(self):
         """Return a string representation of the Square object.

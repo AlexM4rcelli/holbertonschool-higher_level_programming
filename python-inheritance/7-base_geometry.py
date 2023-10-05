@@ -25,6 +25,8 @@ class BaseGeometry:
             ValueError: If the value is not greater than 0.
         """
         if isinstance(name, str):
+            if len(name) <= 0:
+                raise ValueError("name must be not empty")
             if not isinstance(value, int):
                 raise TypeError("{} must be an integer".format(name))
             if not value > 0:
