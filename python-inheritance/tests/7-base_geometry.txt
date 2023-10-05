@@ -55,7 +55,7 @@ Test case #5: invalid name and value
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("", 3.14)
 Traceback (most recent call last):
-ValueError: name must be not empty
+TypeError:  must be an integer
 
 Test case #6: set input
 >>> bg = BaseGeometry()
