@@ -18,4 +18,3 @@ class Square(Rectangle):
             __size (int): The size of the square's sides.
         """
         super().__init__(size, size)
-        self.__size = size

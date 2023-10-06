@@ -49,3 +49,22 @@ Test case #4: invalid name and value
 >>> bg.integer_validator("", 3.14)
 Traceback (most recent call last):
 TypeError:  must be an integer
+
+Test case #5: float inf
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("width", float('inf'))
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+test case #6: None
+Test case #6: invalid name and value
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("None", None)
+Traceback (most recent call last):
+TypeError: None must be an integer
+
+Test case #7: char input
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("char", 'c')
+Traceback (most recent call last):
+TypeError: char must be an integer
