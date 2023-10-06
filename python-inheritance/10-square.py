@@ -16,10 +16,10 @@ class Square(Rectangle):
 
         Attributes:
             __size (int): The size of the square's sides.
-        """ 
+        """
         self.integer_validator("size", size)
         self.__size = size
-    
+
     def area(self):
         """Initialize a Square object.
 
@@ -30,3 +30,11 @@ class Square(Rectangle):
             __size (int): The size of the square's sides.
         """
         return self.__size * self.__size
+
+    def __str__(self):
+        """Return a string representation of the Rectangle object.
+
+        Returns:
+            str: A string in the format "[Rectangle] width/height".
+        """
+        return f"[Rectangle] {self.__size:d}/{self.__size:d}"
