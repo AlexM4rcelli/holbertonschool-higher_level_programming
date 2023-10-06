@@ -17,4 +17,5 @@ class Square(Rectangle):
         Attributes:
             __size (int): The size of the square's sides.
         """
+        self.integer_validator("size", size)
         super().__init__(size, size)
