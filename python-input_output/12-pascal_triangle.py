@@ -8,7 +8,7 @@ def pascal_triangle(n):
     """
     if n <= 0 or not isinstance(n, int):
         return []
-    
+
     triangle = [[1]]
     for i in range(1, n):
         new = [1]
