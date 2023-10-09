@@ -118,25 +118,21 @@ class Rectangle(Base):
             f" {self.__width}/{self.__height}"
         )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Update the attributes of the rectangle.
-
-        The arguments should be provided in the following order:
-        1st argument: id attribute
-        2nd argument: width attribute
-        3rd argument: height attribute
-        4th argument: x attribute
-        5th argument: y attribute
         """
-        if len(args) >= 1:
-            self.id = args[0]
-        if len(args) >= 2:
-            self.width = args[1]
-        if len(args) >= 3:
-            self.height = args[2]
-        if len(args) >= 4:
-            self.x = args[3]
-        if len(args) >= 5:
-            self.y = args[4]
-
+        if args:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.width = args[1]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
