@@ -114,7 +114,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """
-        Returns: 
+        Returns:
             str: string representation of the rectangle.
         """
         return (
