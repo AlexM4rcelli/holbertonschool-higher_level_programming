@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module to define a class"""
 from models.rectangle import Rectangle
 
 
@@ -12,8 +13,8 @@ class Square(Rectangle):
 
         Args:
         - size (int): The size of the square's sides.
-        - x (int, optional): The x-coordinate of the square's position (default is 0).
-        - y (int, optional): The y-coordinate of the square's position (default is 0).
+        - x (int, optional): The x-coordinate of the square's position.
+        - y (int, optional): The y-coordinate of the square's position.
         - id: An optional identifier for the square.
         """
         super().__init__(size, size, x, y)
