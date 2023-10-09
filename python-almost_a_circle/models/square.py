@@ -18,3 +18,6 @@ class Square(Rectangle):
         - id: An optional identifier for the square.
         """
         super().__init__(size, size, x, y, id)
+
+    def __str__(self):
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
