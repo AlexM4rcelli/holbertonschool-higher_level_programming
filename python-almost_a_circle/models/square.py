@@ -17,4 +17,4 @@ class Square(Rectangle):
         - y (int, optional): The y-coordinate of the square's position.
         - id: An optional identifier for the square.
         """
-        super().__init__(size, size, x, y)
+        super().__init__(size, size, x, y, id)
