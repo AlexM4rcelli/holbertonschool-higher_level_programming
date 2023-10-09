@@ -102,15 +102,11 @@ class Rectangle(Base):
         """
         if self.__width == 0 or self.__height == 0:
             print()
-
-        for _ in range(self.__y):
-            print()
-
-        for _ in range(self.__height):
-            print(" " * self.__x, end="")
-            for _ in range(self.__width):
-                print("#", end="")
-            print()
+        else:
+            for _ in range(self.__y):
+                print()
+            for _ in range(self.__height):
+                print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
         """
@@ -121,3 +117,26 @@ class Rectangle(Base):
             f"[{type(self).__name__}] ({self.id}) {self.__x}/{self.__y} -"
             f" {self.__width}/{self.__height}"
         )
+
+    def update(self, *args):
+        """
+        Update the attributes of the rectangle.
+
+        The arguments should be provided in the following order:
+        1st argument: id attribute
+        2nd argument: width attribute
+        3rd argument: height attribute
+        4th argument: x attribute
+        5th argument: y attribute
+        """
+        if len(args) >= 1:
+            self.id = args[0]
+        if len(args) >= 2:
+            self.width = args[1]
+        if len(args) >= 3:
+            self.height = args[2]
+        if len(args) >= 4:
+            self.x = args[3]
+        if len(args) >= 5:
+            self.y = args[4]
+
