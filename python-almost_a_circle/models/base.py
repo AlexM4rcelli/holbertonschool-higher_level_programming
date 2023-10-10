@@ -53,3 +53,12 @@ class Base:
 
         with open(f"{cls.__name__}.json", 'w', encoding="utf-8") as file:
             file.write(cls.to_json_string(data))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        returns an instance with all attributes already set
+        """
+        dummy = cls(1, 1)
+        dummy.update(**dictionary)
+        return dummy
