@@ -1,2 +1,3 @@
 #!/usr/bin/bash
+#Displays listening ports
 sudo lsof -i -n | grep LISTEN
