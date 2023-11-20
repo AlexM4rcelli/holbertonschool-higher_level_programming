@@ -26,7 +26,6 @@ if __name__ == "__main__":
         db.close()
 
     if len(sys.argv) != 5:
-        print("Usage: mysql <username> <password> <database> <state_name>")
         sys.exit(1)
 
     username = sys.argv[1]

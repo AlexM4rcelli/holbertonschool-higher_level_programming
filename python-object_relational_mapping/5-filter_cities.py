@@ -27,14 +27,11 @@ if __name__ == "__main__":
         if cities:
             result = ', '.join(city[0] for city in cities)
             print(result)
-        else:
-            print("No cities found for the specified state.")
 
         cursor.close()
         db.close()
 
     if len(sys.argv) != 5:
-        print("Usage: mysql <username> <password> <database> <state_name>")
         sys.exit(1)
 
     username = sys.argv[1]
