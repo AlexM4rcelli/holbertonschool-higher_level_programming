@@ -15,7 +15,8 @@ if __name__ == "__main__":
                              user=username, passwd=password, db=database)
         cursor = db.cursor()
 
-        query = f"SELECT * FROM states WHERE name = '{state_name}' ORDER BY id ASC"
+        query = "SELECT * FROM states WHERE name = '{}' \
+                 ORDER BY id ASC".format(state_name)
         cursor.execute(query)
 
         states = cursor.fetchall()

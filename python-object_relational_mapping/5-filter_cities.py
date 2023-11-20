@@ -15,14 +15,20 @@ if __name__ == "__main__":
                              user=username, passwd=password, db=database)
         cursor = db.cursor()
 
-        query = "SELECT cities.id, cities.name, states.name FROM cities \
-                JOIN states ON cities.state_id = states.id \
-                WHERE states.name = %s ORDER BY cities.id ASC"
+        query = """
+                SELECT cities.name
+                FROM cities
+                JOIN states ON cities.state_id = states.id
+                WHERE states.name = %s
+                ORDER BY cities.id;
+                """
         cursor.execute(query, (state_name,))
-
         cities = cursor.fetchall()
-        for city in cities:
-            print(city)
+        if cities:
+            result = ', '.join(city[0] for city in cities)
+            print(result)
+        else:
+            print("No cities found for the specified state.")
 
         cursor.close()
         db.close()
